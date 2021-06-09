@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './MovieInfo.css';
+import Movies from './Movies';
 
 function MovieInfo() { 
     const [query, setQuery] = useState("");
@@ -19,6 +20,7 @@ function MovieInfo() {
             setMovies(response['Search']);
         }
         fetchMyAPI();
+        setQuery('')
     }
 
     return(
@@ -35,6 +37,9 @@ function MovieInfo() {
                 />
                 <button className = "search">Submit</button>
             </form>
+            <Movies movies = {movies}>
+
+            </Movies>
         </div>
     )
 }
