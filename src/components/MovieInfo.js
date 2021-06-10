@@ -12,7 +12,7 @@ function MovieInfo() {
         async function fetchMyAPI() {
             const searchParam = encodeURIComponent(query);
             console.log(searchParam);
-            const apiUrl = `https://www.omdbapi.com/?apikey=8c85bfdc&s=${searchParam}&r=json`;
+            const apiUrl = `https://www.omdbapi.com/?apikey=8c85bfdc&s=${searchParam}&r=json&type=movie`;
             console.log(apiUrl);
             let response = await fetch(apiUrl);
             response = await response.json();
@@ -20,14 +20,14 @@ function MovieInfo() {
             setMovies(response['Search']);
         }
         fetchMyAPI();
-        setQuery('')
+        setQuery('');
     }
 
     return(
         <div className = "movieinfo">
             <form onSubmit = {handleSubmit}>
                 <label htmlFor = "queryInput">
-                    Search Movie Name:
+                    Enter Movie Title:
                 </label>
                 <input
                     id = "queryInput"

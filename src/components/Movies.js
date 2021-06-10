@@ -10,9 +10,20 @@ function Movies(props) {
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={movie.Poster} />
                         <Card.Body>
-                            <Card.Title>{movie.Title}</Card.Title>
+                            <Card.Title>
+                                {movie.Title}
+                            </Card.Title>
                             <Card.Text>
-                                Released: {movie.Year}
+                                Released Date: {movie.Year}
+                            </Card.Text>
+                            <Card.Text>
+                                Runtime: N/A
+                            </Card.Text>
+                            <Card.Text>
+                                Genre: N/A
+                            </Card.Text>
+                            <Card.Text>
+                                Director: N/A
                             </Card.Text>
                         </Card.Body>
                     </Card>
